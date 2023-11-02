@@ -1,0 +1,5 @@
+export { CreateRoleDto } from './create-role.dto'
+export { ReadRoleFilterDto } from './read-role-filter.dto'
+export { RoleShort } from './role-short.dto'
+export { UpdatePartiallyRoleDto } from './update-partially-role.dto'
+export { UpdateRoleDto } from './update-role.dto'
