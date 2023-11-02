@@ -8,11 +8,8 @@ RUN npm install
 
 COPY . .
 
-COPY ./dist ./dist
-# Установите переменную окружения для порта
-ENV PORT=8080
+EXPOSE 80
 
-# Откройте порт, на котором будет работать приложение
-EXPOSE 8080
+RUN npm run build
 
-CMD [ "npm", "run", "start:dev" ]
+CMD ["node", "dist/main"]
