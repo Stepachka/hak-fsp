@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 443
+EXPOSE 80
 
 ENV NODE_OPTIONS=--max_old_space_size=2048
 

@@ -25,10 +25,10 @@ const bootstrap = async () => {
 
   const configService = app.select(SharedModule).get(ApiConfigService)
 
-  const httpsOptions = {
+  /*  const httpsOptions = {
     key: readFileSync('./server-key.pem'),
     cert: readFileSync('./server-cert.pem')
-  }
+  }*/
 
   app.use(cookieParser())
   app.setGlobalPrefix('api')
@@ -40,10 +40,7 @@ const bootstrap = async () => {
       'X-Requested-With, Origin, X-HTTP-Method-Override, Content-Type, Accept, Observe, Authorization'
     //allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept'
   })
-  const server = https.createServer(
-    httpsOptions,
-    app.getHttpAdapter().getInstance()
-  )
+  const server = https.createServer(app.getHttpAdapter().getInstance())
 
   useContainer(app.select(AppModule), { fallbackOnErrors: true })
   buildSwagger(app)
