@@ -14,4 +14,4 @@ ENV NODE_OPTIONS=--max_old_space_size=2048
 
 RUN npm run build
 
-CMD ["NODE_ENV=production","node dist/main"]
+CMD ["node", "NODE_ENV=production", "dist/main"]
