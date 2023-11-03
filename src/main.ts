@@ -16,6 +16,7 @@ import * as fs from 'fs'
 import { readFileSync } from 'fs'
 import * as https from 'https'
 
+console.log(process.env.NODE_ENV)
 const bootstrap = async () => {
   const app = await NestFactory.create<NestExpressApplication>(
     AppModule,
