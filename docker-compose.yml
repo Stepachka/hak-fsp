@@ -18,6 +18,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: hakaton
+      POSTGRES_PORT: 5432
     ports:
       - '5432:5432'
     networks:
